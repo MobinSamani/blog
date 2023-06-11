@@ -1,0 +1,44 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "A Vue Application To Manage Your Blog Posts as Code Example",
+  "homepage": "https://github.com/MobinSamani/blog",
+  "author": {
+    "name": "Mobin Samani",
+    "email": "Contact@MobinSamani.com",
+    "url": "https://MobinSamani.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MobinSamani/blog.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host=0.0.0.0",
+    "build": "vite build",
+    "start": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix",
+    "format": "prettier .  --write"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/vue-fontawesome": "^3.0.2",
+    "axios": "^0.26.1",
+    "vue": "^3.2.37",
+    "vue-meta": "^3.0.0-alpha.10",
+    "vue-router": "^4.1.5",
+    "vue-toastification": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "autoprefixer": "^10.4.11",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.5.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.1.0"
+  }
+}
