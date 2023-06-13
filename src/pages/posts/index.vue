@@ -1,18 +1,9 @@
 <template>
   <div class="grow w-full flex flex-col gap-y-8">
     <div class="flex flex-col sm:flex-row lg:items-center justify-between gap-4">
-      <c-input placeholder="Search" icon="magnifying-glass" v-model="searchParams.q" />
+      <c-input placeholder="Search" icon="magnifying-glass" wrapper-classes="!rounded-3xl" v-model="searchParams.q" />
 
-      <btn
-        block
-        post-icon="circle-plus"
-        icon-class="fa-lg"
-        router-link
-        to="/posts/create"
-        class="bg-primary focus:bg-primary-dark text-zinc-50 sm:w-auto"
-      >
-        Add new post
-      </btn>
+      <btn block post-icon="plus" router-link to="/posts/create" class="bg-primary focus:bg-primary-dark text-zinc-50 sm:w-auto">Add new post</btn>
     </div>
 
     <loading v-if="initializing" />

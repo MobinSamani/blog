@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col gap-y-4">
-    <label v-if="label || $slots.label" :for="`input-${id}`" class="block text-zinc-600">
-      <slot name="label"> {{ label }} : <span v-if="required" class="text-red-500">*</span> </slot>
+  <div class="flex flex-col gap-y-1">
+    <label v-if="label || $slots.label" :for="`input-${id}`" class="block text-sm font-bold text-zinc-600 ml-2">
+      <slot name="label">{{ label }}</slot>
     </label>
 
     <div class="flex flex-col gap-y-2">
@@ -36,8 +36,9 @@ export default {
   computed: {
     classes() {
       return {
-        "bg-zinc-100 border flex items-center rounded-lg focus-within:border-purple-500 duration-150 px-4 py-2 outline-none w-full": true,
-        "!border-red-500": this.error
+        "bg-zinc-100 border flex items-center rounded-lg focus-within:border-zinc-400 duration-150 px-4 py-2 outline-none w-full": true,
+        "!border-red-500": this.error,
+        "border-zinc-300": this.model
       };
     }
   },

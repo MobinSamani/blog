@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col gap-y-4">
-    <label v-if="label || $slots.label" :for="`input-${id}`" class="block text-zinc-600">
-      <slot name="label"> {{ label }} : <span v-if="required" class="text-red-500">*</span> </slot>
+  <div class="flex flex-col gap-y-1">
+    <label v-if="label || $slots.label" :for="`input-${id}`" class="block text-sm font-bold text-zinc-600 ml-2">
+      <slot name="label">{{ label }}</slot>
     </label>
 
     <div class="flex flex-col gap-y-2">
@@ -18,6 +18,7 @@
           :type="type"
           :readonly="readonly"
           v-model="model"
+          @keypress.enter="$emit('submit')"
         />
 
         <div v-if="$slots.append" class="flex items-center justify-center px-4">
@@ -58,11 +59,11 @@ export default {
     classes() {
       return [
         {
-          "bg-zinc-100 border flex items-center rounded-3xl focus-within:border-zinc-400 duration-150": true,
+          "bg-zinc-100 border flex items-center rounded-lg focus-within:border-zinc-400 duration-150": true,
           "!border-red-500": this.error,
           "pl-4": !this.icon,
           "pr-4": !this.$slots.append,
-          "border-zinc-400": this.model
+          "border-zinc-300": this.model
         },
         this.wrapperClasses
       ];
