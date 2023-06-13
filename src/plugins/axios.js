@@ -1,10 +1,8 @@
 import Axios from "axios";
 
-function onResponse(res, ctx) {
-  const response = res.response || res;
-
-  if (response) {
-    if (response.status >= 200 && response.status < 300) return response.data;
+function onResponse(response, ctx) {
+  if (response && response.status >= 200 && response.status < 300) {
+    return response.data;
   } else {
     ctx.$router.push("/500");
     return Promise.reject("Something Went Wrong!");

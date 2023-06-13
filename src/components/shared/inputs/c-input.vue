@@ -58,10 +58,11 @@ export default {
     classes() {
       return [
         {
-          "bg-zinc-100 border flex items-center rounded-lg focus-within:border-purple-500 duration-150": true,
+          "bg-zinc-100 border flex items-center rounded-3xl focus-within:border-zinc-400 duration-150": true,
           "!border-red-500": this.error,
           "pl-4": !this.icon,
-          "pr-4": !this.$slots.append
+          "pr-4": !this.$slots.append,
+          "border-zinc-400": this.model
         },
         this.wrapperClasses
       ];

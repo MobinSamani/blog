@@ -21,7 +21,7 @@
 @font-face {
   font-family: "roboto";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   src: local("roboto"), url("../fonts/roboto/bold.ttf") format("truetype");
   font-display: swap;
 }

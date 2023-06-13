@@ -1,5 +1,5 @@
 const faker = require("faker");
-const POSTS_COUNT = 5000;
+const POSTS_COUNT = 100;
 const USERS_COUNT = 100;
 
 const posts = [];
@@ -16,11 +16,9 @@ function createFakePost() {
     text: faker.lorem.paragraph(),
     image: faker.image.image(),
     likes: faker.datatype.number(100),
-    tags: new Array(faker.datatype.number(8))
-      .fill("")
-      .map(() => faker.lorem.word()),
+    tags: new Array(faker.datatype.number(8)).fill("").map(() => faker.lorem.word()),
     publishDate: faker.date.recent(null, new Date()),
-    userId: users[faker.datatype.number(USERS_COUNT - 1)].id,
+    userId: users[faker.datatype.number(USERS_COUNT - 1)].id
   };
 }
 
@@ -30,7 +28,7 @@ function createFakeUser() {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
     email: faker.internet.email(),
-    avatar: faker.image.avatar(),
+    avatar: faker.image.avatar()
   };
 }
 
@@ -45,6 +43,6 @@ module.exports = () => {
 
   return {
     posts,
-    users,
+    users
   };
 };

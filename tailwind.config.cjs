@@ -5,6 +5,12 @@ module.exports = {
     extend: {
       fontFamily: {
         sofia: ["roboto"]
+      },
+      colors: {
+        primary: {
+          DEFAULT: "#4F73D0",
+          dark: "#224DBA"
+        }
       }
     }
   },

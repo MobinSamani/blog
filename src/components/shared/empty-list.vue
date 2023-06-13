@@ -11,7 +11,7 @@
 export default {
   name: "EmptyList",
   props: {
-    iconClass: { type: String, default: "fa-5x" },
+    iconClass: { type: String, default: "fa-4x" },
     messageClass: { type: String, default: "text-2xl" }
   }
 };
