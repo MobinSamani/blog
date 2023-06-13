@@ -10,7 +10,7 @@
 
     <template v-else>
       <div v-if="items?.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-        <div v-for="item in items" :key="item.id" class="border rounded-lg p-3 flex flex-col gap-y-4">
+        <router-link v-for="item in items" :key="item.id" :to="`/posts/${item.id}`" class="border rounded-lg p-3 flex flex-col gap-y-4">
           <div class="flex flex-col gap-y-2.5">
             <image-display v-if="item.image" :value="item.image" :width="582" :height="123" />
 
@@ -38,7 +38,7 @@
               </div>
             </template>
           </user-display>
-        </div>
+        </router-link>
       </div>
 
       <empty-list v-else />
