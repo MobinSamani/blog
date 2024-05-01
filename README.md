@@ -4,7 +4,7 @@
 
 [Demo](https://Blog.MobinSamani.com)
 
-## Install
+## Install Client
 
 ```shell
 git clone https://github.com/MobinSamani/blog.git
@@ -18,4 +18,16 @@ cp ./.env.example ./.env
 npm install
 
 npm run dev
+```
+
+## Install Server
+
+```shell
+git clone https://github.com/MobinSamani/blog.git
+
+cd ./blog/src/services/server
+
+npm install
+
+npm run start
 ```
