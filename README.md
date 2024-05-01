@@ -11,6 +11,10 @@ git clone https://github.com/MobinSamani/blog.git
 
 cd ./blog
 
+cp ./.env.example ./.env
+
+# Edit .env file and set your environment variables
+
 npm install
 
 npm run dev
